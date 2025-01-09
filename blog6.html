@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Update - January 2025</title>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #1e1e1e;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+        h1, h2 {
+            color: #ffffff;
+        }
+        h3 {
+            color: #bb86fc;
+        }
+        .portfolio-graph {
+            width: 100%;
+            height: 400px;
+            margin: 20px 0;
+        }
+        .insight {
+            background-color: #2c2c2c;
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        footer {
+            text-align: center;
+            color: #888;
+            margin-top: 20px;
+        }
+    </style>
+    <script type="text/javascript">
+        google.charts.load('current', { packages: ['corechart', 'pie'] });
+
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Asset', 'Percentage'],
+                ['Upstart (UPST)', 22],
+                ['Shopify (SHOP)', 18],
+                ['Block (SQ)', 15],
+                ['Palantir (PLTR)', 13],
+                ['Teladoc Health (TDOC)', 12],
+                ['QuantumScape (QS)', 10],
+                ['Cloudflare (NET)', 10]
+            ]);
+
+            var options = {
+                title: 'Portfolio Distribution - January 2025',
+                is3D: true,
+                slices: {
+                    0: { offset: 0.1 },
+                    1: { offset: 0.1 },
+                    2: { offset: 0.1 },
+                    3: { offset: 0.1 },
+                    4: { offset: 0.1 },
+                    5: { offset: 0.1 },
+                    6: { offset: 0.1 }
+                },
+                backgroundColor: '#121212',
+                pieSliceText: 'percentage',
+                legend: { position: 'top', alignment: 'center' },
+                chartArea: { width: '80%', height: '80%' }
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('portfolio-pie-chart'));
+            chart.draw(data, options);
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Portfolio Update - August 2023</h1>
+        <h2>Current Holdings & Performance</h2>
+
+        <img src="/src/blog6.PNG">
+
+        <h3>Top Holdings</h3>
+        <ul>
+            <li>Upstart (UPST) - 22%</li>
+            <li>Shopify (SHOP) - 18%</li>
+            <li>Block (SQ) - 15%</li>
+            <li>Palantir (PLTR) - 13%</li>
+            <li>Teladoc Health (TDOC) - 12%</li>
+            <li>QuantumScape (QS) - 10%</li>
+            <li>Cloudflare (NET) - 10%</li>
+        </ul>
+
+        <div class="insight">
+            <h4>Insights & Analysis</h4>
+            <p><strong>Upstart's Growth Potential:</strong> Upstart has been a standout performer in the AI-driven lending space. With the ongoing trends toward digital financial services, Upstart's ability to use AI to offer personal loans based on non-traditional data sets positions it well in a growing market. As interest rates begin to stabilize, Upstart’s risk-adjusted lending model could see increased demand, especially for consumers who are underserved by traditional credit systems.</p>
+
+            <p><strong>Shopify's Resilience in E-Commerce:</strong> Shopify continues to evolve as a key player in the e-commerce space, particularly as it focuses on helping smaller businesses scale. The growing trend of direct-to-consumer (D2C) businesses is a tailwind for Shopify's growth. Shopify's push into AI tools for merchants and its ability to enhance store personalization could further solidify its position in the market, making it an attractive long-term hold.</p>
+
+            <p><strong>Block (formerly Square) and the Crypto Opportunity:</strong> Block's pivot towards cryptocurrency, including its acquisition of Afterpay and expansion into Bitcoin-related services, is positioning it as a fintech leader for the future. With Bitcoin’s resurgence and institutional adoption, Block's ability to capitalize on both traditional payment processing and blockchain technology sets it apart from other financial firms. I see this as a long-term growth opportunity as more of the world transitions toward digital currencies.</p>
+
+            <p><strong>Palantir's Role in Big Data:</strong> Palantir remains one of the most promising players in the big data and AI-driven analytics space. Its ties to government contracts and growing adoption among private companies highlight its potential. I remain confident that Palantir’s cutting-edge tools will continue to drive efficiency and decision-making at scale, especially as companies seek to leverage data for competitive advantage in a fast-evolving market.</p>
+
+            <p><strong>Teladoc Health and the Telemedicine Revolution:</strong> Teladoc Health continues to lead the telemedicine and virtual care space. The shift toward digital healthcare services, driven by convenience and accessibility, bodes well for Teladoc's future growth. As regulatory environments continue to improve and more consumers embrace telehealth, Teladoc is well-positioned to expand its market share. The company’s investment in mental health services is another factor that could help it diversify its offerings and further fuel growth.</p>
+
+            <p><strong>QuantumScape’s Battery Technology:</strong> QuantumScape, a leader in solid-state battery technology, is a speculative yet promising investment. If successful, its solid-state batteries could revolutionize electric vehicle (EV) technology and renewable energy storage by offering higher efficiency, better energy density, and faster charging times compared to current lithium-ion batteries. While the technology is still in the early stages, it could change the landscape for EVs and renewable energy if it reaches commercialization.</p>
+
+            <p><strong>Cloudflare’s Growing Edge Computing Capabilities:</strong> Cloudflare continues to enhance its edge computing and cybersecurity offerings. The company is benefiting from the global move toward decentralized data processing and an increasing need for robust security. Cloudflare’s product innovation, including its Zero Trust security services and distributed computing platforms, positions it as a leader in the cybersecurity space. I’m optimistic about Cloudflare's ability to continue expanding its customer base and increasing revenue in the coming years.</p>
+        </div>
+
+        <footer>
+            <p>Portfolio update by Soham Takuri. Data sourced from public financial markets and analysis platforms.</p>
+        </footer>
+    </div>
+</body>
+</html>

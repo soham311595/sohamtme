@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soham T's Blog</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      overflow-y: scroll;
+      padding-top: 4700px; 
+    }
+  
+    .typewriter {
+            font-size: 1.2rem;
+            margin: 0 0 1.5rem;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid var(--text-color);
+            animation: typing 4s steps(40, end), blink 0.6s step-end infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink {
+            50% {
+                border-color: transparent;
+            }
+        }
+
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 80%;
+      max-width: 1200px;
+    }
+
+    /* Intro Section */
+    .intro {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 20px;
+      color: #bbb;
+    }
+
+    .intro h1 {
+      font-size: 36px;
+      color: #fff;
+    }
+
+    /* Follow Button Section */
+    .follow-section {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .follow-button {
+      padding: 15px 30px;
+      background-color: rgba(202, 100, 63, 0.725);
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 18px;
+      transition: background-color 0.3s ease;
+    }
+
+    .follow-button:hover {
+      background-color: #2c2c2c;
+    }
+
+    .email-input {
+      padding: 10px;
+      width: 250px;
+      margin-top: 10px;
+      border-radius: 10px;
+      border: none;
+      font-size: 16px;
+    }
+
+    .followers-text {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #777;
+    }
+
+    /* Blog Post Boxes */
+    .box {
+      background-color: #1e1e1e;
+      width: 100%;
+      margin: 10px 0;
+      padding: 20px;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+    }
+
+    .box:hover {
+      transform: scale(1.05);
+      background-color: #2c2c2c;
+    }
+
+    .box img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-right: 20px;
+    }
+
+    .box-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .box h2 {
+      font-size: 24px;
+      color: #fff;
+      margin: 0;
+    }
+
+    .box .subtitle {
+      font-size: 16px;
+      color: #bbb;
+    }
+
+    .box .date {
+      font-size: 14px;
+      color: #777;
+      margin-top: 10px;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    .box:first-child::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(45deg, #ff6b6b, #fddb92, #1dd1a1, #54a0ff);
+  background-size: 300% 300%;
+  border-radius: 15px;
+  z-index: -1;
+  animation: gradientAnimation 4s linear infinite;
+}
+
+/* Keyframes for animated gradient border */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+    /* Delay each box to appear one after the other */
+    .box:nth-child(1) {
+      animation-delay: 0.1s;
+    }
+
+    .box:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    .box:nth-child(3) {
+      animation-delay: 0.3s;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Intro Section -->
+    <div class="intro">
+      <h1 >Welcome to My Blog!</h1>
+      <div >
+        <a style="text-decoration: none;"href="index.html">
+            <h2 style="justify-content: center;"> Home🏠 </h2>
+        </a>
+    </div>
+      <p class="typewriter">Explore thought-provoking articles on technology, AI, finance, crypto, and more!</p>
+    </div>
+
+    <!-- Follow Section -->
+    <div class="follow-section">
+      <button class="follow-button" onclick="alert('Thank you for following!')">Follow</button>
+      <input type="email" class="email-input" placeholder="Enter your email" />
+      <div class="followers-text">
+
+        Join 400+ followers, and I'll send you an email whenever a new post is published!</div>
+    </div>
+
+    <!-- Blog Post Boxes -->
+    <div class="box">
+      <a href="blog58.html">
+      <img src="src/blog58.jpg">
+      <div class="box-content">
+        <h2>Quantum Computing Stocks Surge: A Look at IonQ, Rigetti, and D-Wave</h2>
+
+        <p class="date">November 18, 2024</p>
+      </a> </div>
+    </div>
+
+    <div class="box">
+      <a href="blog57.html">
+      <img src="src/blog57.jpg">
+      <div class="box-content">
+        <h2>Trump's Proposed Easing of Cryptocurrency Regulations: A New Era for Digital Assets?</h2>
+
+        <p class="date">November 3, 2024</p>
+      </a> </div>
+    </div>
+      
+    <div class="box">
+      <a href="blog56.html">
+      <img src="src/blog56.jpg">
+      <div class="box-content">
+        <h2>Global Economic Outlook: Navigating Challenges and Opportunities</h2>
+
+        <p class="date">October 22, 2024</p>
+      </a> </div>
+    </div>
+      <div class="box">
+        <a href="blog55.html">
+        <img src="src/blog55.jpg">
+        <div class="box-content">
+          <h2>October 2024 Quantum Computing Roadmaps: The Future of Quantum Innovation</h2>
+
+          <p class="date">October 15, 2024</p>
+        </a> </div>
+      </div>
+      
+      <div class="box">
+        <a href="blog54.html">
+        <img src="src/blog54.jpg">
+        <div class="box-content">
+          <h2>IBM's Quantum Leap: A New Quantum Data Center in Europe</h2>
+
+          <p class="date">October 1, 2024</p>
+        </a> </div>
+      </div>
+      <div class="box">
+        <a href="blog53.html">
+        <img src="src/blog53.jpeg">
+        <div class="box-content">
+          <h2>U.S. Federal Reserve Cuts Interest Rates: Navigating Economic Uncertainty</h2>
+
+          <p class="date">September 30, 2024</p>
+        </a> </div>
+      </div>
+      <div class="box">
+        <a href="blog52.html">
+        <img src="src/blog52.jpg">
+        <div class="box-content">
+          <h2>China’s Economic Stimulus: A Strategic Move for Sustained Growth</h2>
+
+          <p class="date">September 21, 2024</p>
+        </a> </div>
+      </div>
+      <div class="box">
+        <a href="blog51.html">
+        <img src="src/blog51.jpg">
+        <div class="box-content">
+          <h2>OpenAI Co-Founder’s New Venture: Safe Superintelligence Inc.</h2>
+
+          <p class="date">September 10, 2024</p>
+        </a> </div>
+      </div>
+      
+      <div class="box">
+        <a href="blog50.html">
+        <img src="src/blog50.jpg">
+        <div class="box-content">
+          <h2>Palantir Q2 2024 Earnings: AI-Fueled Growth and Strategic Resilience</h2>
+
+          <p class="date">August 15, 2024</p>
+        </a> </div>
+      </div>
+      
+      <div class="box">
+        <a href="blog49.html">
+        <img src="src/blog49.jpg">
+        <div class="box-content">
+          <h2>Crypto Market Insights: First Week of August 2024</h2>
+
+          <p class="date">August 12, 2024</p>
+        </a> </div>
+      </div>
+      
+      <div class="box">
+        <a href="blog48.html">
+        <img src="src/blog48.jpg">
+        <div class="box-content">
+          <h2>IBM Q2 2024 Earnings</h2>
+          <p class="subtitle"> AI and Hybrid Cloud Drive Solid Growth</p>
+
+          <p class="date">July 25, 2024</p>
+        </a> </div>
+      </div>
+      
+      <div class="box">
+        <a href="blog47.html">
+        <img src="src/blog47.jpg">
+        <div class="box-content">
+          <h2>Microsoft Q2 2024 Earnings</h2>
+          <p class="subtitle"> Cloud Growth and AI Push Drive Momentum</p>
+
+          <p class="date">July 24, 2024</p>
+        </a> </div>
+      </div>
+      
+      <div class="box">
+        <a href="blog46.html">
+        <img src="src/blog46.png">
+        <div class="box-content">
+          <h2>Tesla Q2 2024 Earnings: A Cautionary Tale Amidst Slowing Growth</h2>
+
+          <p class="date">July 23, 2024</p>
+        </a> </div>
+      </div>
+      
+      
+      <div class="box">
+        <a href="blog45.html">
+        <img src="src/blog45.jpg">
+        <div class="box-content">
+          <h2>Goldman Sachs Q2 2024 Earnings: Robust Performance Amid Market Volatility</h2>
+
+          <p class="date">July 12, 2024</p>
+        </a> </div>
+      </div>
+      
+      <div class="box">
+        <a href="blog44.html">
+        <img src="src/blog44.png">
+        <div class="box-content">
+          <h2>SoFi Technologies: A Strong Q2 2024 and Long-Term Growth Prospects</h2>
+
+          <p class="date">July 5, 2024</p>
+        </a> </div>
+      </div>
+      
+      <div class="box">
+        <a href="blog43.html">
+        <img src="src/blog7.jpg">
+        <div class="box-content">
+          <h2>Personal Portfolio Update -  June 2024</h2>
+
+          <p class="date">June 27, 2024</p>
+        </a> </div>
+      </div>
+      
+      <div class="box">
+        <a href="blog42.html">
+        <img src="src/blog42.png">
+        <div class="box-content">
+          <h2>Nubank's Rise: Transforming Latin American Banking</h2>
+
+          <p class="date">June 15, 2024</p>
+        </a> </div>
+      </div>
+      
+      <!-- Continue with this pattern until reaching Blog Post 101 -->
+      <div class="box">
+        <a href="blog41.html">
+        <img src="src/blog41.png">
+        <div class="box-content">
+          <h2>Vertex and AccountsIQ: Revolutionizing Tax Automation</h2>
+
+          <p class="date">June 15, 2024</p>
+        </a> </div>
+      </div>
+      
+      <div class="box">
+        <a href="blog40.html">
+        <img src="src/blog40.jpg">
+        <div class="box-content">
+          <h2>Stock Market Highlights: Week 1 June 2024</h2>
+
+          <p class="date">June 7, 2024</p>
+        </a> </div>
+      </div>
+      
+      <div class="box">
+        <a href="blog39.html">
+        <img src="src/blog39.jpg">
+        <div class="box-content">
+          <h2>Stock Earnings Reports: Late May 2024</h2>
+
+          <p class="date">May 31, 2024</p>
+        </a> </div>
+      </div>
+      <div class="box">
+        <a href="blog38.html">
+        <img src="src/blog38.png">
+        <div class="box-content">
+          <h2>Ethereum ETFs: A Landmark Decision by the SEC</h2>
+
+          <p class="date">May 14, 2024</p>
+        </a> </div>
+      </div>
+      <div class="box">
+        <a href="blog37.html">
+        <img src="src/blog37.jpg">
+        <div class="box-content">
+          <h2>Emory University's Bold Move in AI Integration</h2>
+          <p class="subtitle"> Shaping the Future of Academia</p>
+
+          <p class="date">May 6, 2024</p>
+        </a> </div>
+      </div>
+      
+      <div class="box">
+        <a href="blog36.html">
+        <img src="src/blog36.jpg">
+        <div class="box-content">
+          <h2>Dr. Ted Kaouk: The CFTC's First Chief AI Officer</h2>
+          <p class="subtitle">Impact on Financial Regulation</p>
+
+          <p class="date">May 1, 2024</p>
+        </a> </div>
+      </div>
+      
+      <div class="box">
+        <a href="blog35.html">
+        <img src="src/blog35.jpg">
+        <div class="box-content">
+          <h2>IBM Quantum System One</h2>
+          <p class="subtitle">A Quantum Leap for Research and Education</p>
+
+          <p class="date">April 28, 2024</p>
+        </a> </div>
+      </div>
+      
+      <div class="box">
+        <a href="blog34.html">
+        <img src="src/blog34.jpg">
+        <div class="box-content">
+          <h2>Super Micro Computer Stock Performance - April 2024</h2>
+          <p class="date">April 19, 2024</p>
+        </a> </div>
+      </div>
+      <div class="box">
+        <a href="blog33.html">
+        <img src="src/blog33.png">
+        <div class="box-content">
+          <h2>Polkadot's Strengthened Ecosystem</h2>
+          <p class="subtitle">A Game-Changer for Blockchain Interoperability</p>
+          <p class="date">April 16, 2024</p>
+        </a> </div>
+      </div>
+      
+      <div class="box">
+        <a href="blog32.html">
+        <img src="src/blog32.png">
+        <div class="box-content">
+          <h2>Apple Inc.'s Shifting Workforce</h2>
+          <p class="subtitle">A Look into Its Strategic Move Amid Economic Pressures</p>
+          <p class="date">April 5, 2024</p>
+        </a> </div>
+      </div>
+      
+      <div class="box">
+        <a href="blog31.html">
+        <img src="src/blog31.jpg">
+        <div class="box-content">
+          <h2>LEAP 2024</h2>
+          <p class="subtitle">A Game-Changing Event for AI and Tech Innovation</p>
+          <p class="date">March 30, 2024</p>
+        </a> </div>
+      </div>
+      <div class="box">
+        <a href="blog30.html">
+        <img src="src/blog30.png">
+        <div class="box-content">
+          <h2>AI Governance in Finance</h2>
+          <p class="subtitle">OMFIF Seminar Insights</p>
+          <p class="date">March 20, 2024</p>
+        </a> </div>
+      </div>
+      
+      <div class="box">
+        <a href="blog29.html">
+        <img src="src/blog29.jpg">
+        <div class="box-content">
+          <h2>OpenAI’s Sora Gains Traction in Hollywood</h2>
+          <p class="subtitle">The Future of Filmmaking</p>
+          <p class="date">March 6, 2024</p>
+        </a>  </div>
+      </div>
+      
+      <div class="box">
+        <a href="blog28.html">
+        <img  src="src/blog28.png" alt="AI and Nuclear Energy">
+        <div class="box-content">
+          <h2>AI and Nuclear Energy</h2>
+          <p class="subtitle">A Bold New Era for Sustainable Power</p>
+          <p class="date">March 5, 2024</p>
+        </a></div>
+      </div>
+      
+      <div class="box">
+        <a href="blog27.html">
+        <img  src="src/blog27.png">
+        <div class="box-content">
+          <h2>Klarna's AI Assistant Revolutionizes Customer Service</h2>
+          <p class="date">February 27, 2024</p>
+        </a></div>
+       </div>
+      
+      <div class="box">
+        <a href="blog26.html">
+
+        <img src="src/blog26.jpg">
+        <div class="box-content">
+          <h2>Capital One Acquires Discover Financial</h2>
+          <p class="subtitle"> Game-Changing $35 Billion Deal</p>
+          <p class="date">February 21, 2024</p>
+        </a></div>
+      </div>
+      <div class="box">
+        <a href="blog25.html">
+
+        <img src="src/blog25.png">
+        <div class="box-content">
+          <h2>Disney Stock Soars</h2>
+          <p class="subtitle">A Promising Partnership with Epic Games</p>
+          <p class="date">February 8, 2024</p>
+        </a></div>
+      </div>
+      
+      <div class="box">
+        <a href="blog24.html">
+        <img src="src/blog24.jpg">
+        <div class="box-content">
+          <h2>AI-Powered Waste Sorting</h2>
+          <p class="subtitle">Revolutionizing Recycling for a Sustainable Future</p>
+          <p class="date">February 1, 2024</p>
+        </a></div>
+      </div>
+      
+      <div class="box">
+        <a href="blog23.html">
+          <img src="/src/blog7.jpg" alt="Blog Image 95">
+          <div class="box-content">
+          <h2>Portfolio Update January 2024</h2>
+          <p class="date">January 30, 2024</p>
+        </a> </div>
+      </div>
+      
+      <div class="box">
+        <a href="blog22.html">
+        <img src="src/blog22.png" alt="Micron Technology">
+        <div class="box-content">
+          <h2>Micron Technology's Strategic Move</h2>
+          <p class="subtitle">AI Memory Chip Production</p>
+          <p class="date">January 18, 2024</p>
+        </a></div>
+      </div>
+      
+      <div class="box">
+        <a href="blog21.html">
+        <img src="src/blog21.jpg">
+        <div class="box-content">
+          <h2>Tesla Reintroduces Bitcoin Payments</h2>
+          <p class="subtitle">A Bold Move for the Future of Finance</p>
+          <p class="date">January 10, 2024</p>
+        </a></div>
+      </div>
+      
+      <!-- Continue with this pattern until Blog Post 101 -->
+      <div class="box">
+        <a href="blog20.html">
+        <img src="src/blog20.png">
+        <div class="box-content">
+          <h2>SEC Approval of Bitcoin ETFs</h2>
+          <p class="subtitle">A Landmark Decision for Cryptocurrency Markets</p>
+          <p class="date">January 3, 2024</p>
+        </a></div>
+      </div>
+      
+      <div class="box">
+        <a href="blog19.html">
+        <img src ="src/blog19.jpg">
+        <div class="box-content">
+          <h2>Final Outlook on the 2023 Stock Market: What’s Next for 2024?</h2>
+          <p class="subtitle">A Deep Dive into Market Trends and Forecasts for the Upcoming Year</p>
+          <p class="date">December 31, 2023</p>
+        </a></div>
+      </div>
+      
+      <div class="box">
+        <a href="blog18.html">
+          <img src="src/blog18.png">
+          <div class="box-content">
+          <h2>Palantir Technologies' Stock Performance in December 2023</h2>
+          <p class="subtitle">Analyzing Stock Movement and Strategic Developments</p>
+          <p class="date">December 20, 2023</p>
+        </a></div>
+      </div>
+      
+      <div class="box">
+        <a href="blog17.html">
+        <img src="src/blog17.jpg">
+        <div class="box-content">
+          <h2>IBM's New Processor and DARPA's Program</h2>
+          <p class="subtitle">Exploring the Latest Developments in Quantum Technology</p>
+          <p class="date">December 15, 2023</p>
+        </a> </div>
+      </div>
+      
+      <div class="box">
+        <a href="blog16.html">
+        <img src="src/blog16.png">
+        <div class="box-content">
+          <h2>Regis Corporation's Remarkable Performance</h2>
+          <p class="subtitle">How Regis Corporation Achieved a 941% Return in November</p>
+          <p class="date">December 2, 2023</p>
+        </a></div>
+      </div>
+      
+      <div class="box">
+        <a href="blog15.html">
+        <img src="src/blog15.png">        
+        <div class="box-content">
+          <h2>Palantir Technologies' AI Developments</h2>
+          <p class="subtitle">Strategic Partnership with Shield AI and Strong Financial Performance</p>
+          <p class="date">November 23, 2023</p>
+        </a></div>
+      </div>
+      
+      <div class="box">
+        <a href="blog14.html">
+        <img  src="src/blog14.jpg">
+        <div class="box-content">
+          <h2>Stock Market Performance for the Week Ending November 17, 2023</h2>
+          <p class="date">November 17, 2023</p>
+        </a></div>
+      </div>
+      
+      <div class="box">
+        <a href="blog13.html">
+        <img src="src/blog13.png">
+        <div class="box-content">
+          <h2>XRP's Market Surge on November 12, 2023</h2>
+          <p class="subtitle">Analyzing XRP's Significant Price Movement Amid Speculative Market Forces</p>
+          <p class="date">November 12, 2023</p>
+        </a> </div>
+      </div>
+      
+      <div class="box">
+        <a href="blog12.html">
+        <img src="src/blog12.jpg">
+        <div class="box-content">
+          <h2>AMD's Strategic Developments in Early November 2023</h2>
+          <p class="subtitle">AMD's Strategic Focus on AI and High-Performance Computing Fuels Investor Optimism</p>
+          <p class="date">November 3, 2023</p>
+        </a></div>
+      </div>
+      
+      <div class="box">
+        <a href="blog11.html">
+        <img src="src/blog11.png">
+        <div class="box-content">
+          <h2>BullFrog AI Presents at Benzinga All Access Event</h2>
+          <p class="subtitle">Leveraging AI to Transform Drug Development</p>
+          <p class="date">September 15, 2023</p>
+        </a>
+        </div>
+      </div>
+      
+      <div class="box">
+        <a href="blog10.html">
+        <img src="src/blog10.jpg">
+
+        <div class="box-content">
+          <h2>Slice's Merger with North East Small Finance Bank</h2>
+          <p class="subtitle">Strategic Implications for India's Fintech and Financial Inclusion Landscape</p>
+          <p class="date">October 13, 2023</p>
+        </a>
+        </div>
+      </div>
+      
+      <div class="box">
+        <a href="blog9.html">
+        <img src="src/blog9.png" alt="Blog Image 93">
+        <div class="box-content">
+          <h2>AI-Powered Solutions to Accelerate Clean Energy Integration</h2>
+          <p class="subtitle">AI-Driven Energy Solutions: Revolutionizing the Grid for Faster Renewable Integration</p>
+          <p class="date">October 5, 2023</p>
+        </a>
+        </div>
+      </div>
+      
+      <div class="box">
+        <a href="blog8.html">
+        <img src="src/blog8.jpg" alt="Blog Image 94">
+        <div class="box-content">
+          <h2>Kraken's Strategic Expansion into U.S. Stock Trading</h2>
+          <p class="subtitle">Kraken's Move to Bridge Digital and Traditional Markets
+          </p>
+          <p class="date">September 30, 2023</p>
+        </a>
+        </div>
+
+      </div>
+      
+      <div class="box">
+        <a href="blog7.html">
+        <img src="/src/blog7.jpg" alt="Blog Image 95">
+        <div class="box-content">
+          <h2>Navigating Market Volatility Amidst Economic Data</h2>
+          <p class="date">September 14, 2023</p>
+        </a>
+        </div>
+      </div>
+      
+      <div class="box">
+        <a href="blog6.html">
+        <img src="/src/blog6.PNG" alt="Blog Image 96">
+        <div class="box-content">
+          <h2>Portfolio Update!</h2>
+          <p class="date">September 1, 2023</p>
+         </a> </div>
+    
+      </div>
+      
+      <div class="box">
+
+        <a href="blog5.html">
+        <img src="/src/blog5.jpg" alt="Blog Image 97">
+        <div class="box-content">
+          <h2>Evergrande's Bankruptcy Filing: A Turning Point in China's Property Crisis</h2>
+          <p class="subtitle">Assessing the Implications of Evergrande's Chapter 15 Bankruptcy Protection</p>
+          <p class="date">August 23, 2023</p>
+        </a>
+        </div>
+      </div>
+      
+      <div class="box">
+        <a href="blog4.html">
+        <img src="/src/blog4.jpg" alt="Blog Image 98">
+        <div class="box-content">
+          <h2>Meta’s Bold Move: Launching AI-Powered Chatbots for Customer Service</h2>
+          <p class="subtitle">Meta redefines customer service with AI-driven chatbots, pushing boundaries in tech-driven support systems</p>
+          <p class="date">August 13, 2023</p>
+        </a>
+        </div>
+      </div>
+      
+      <div class="box">
+        <a href="blog3.html">
+        <img src="/src/blog3.jpg" alt="Blog Image 99">
+        <div class="box-content">
+          <h2>Wall Street's Bold AI Debt Market: Nvidia's Chips Fueling Financial Innovation</h2>
+          <p class="subtitle">Exploring the rise of AI-backed loans and the risks shaping a new financial frontier</p>
+          <p class="date">August 10, 2023</p>
+        </a>
+        </div>
+      </div>
+      
+      <div class="box">
+        <a href="blog2.html">
+        <img src="/src/blog2.png" alt="Blog Image 100">
+        <div class="box-content">
+          <h2>AI and Finance: Key Developments in Early August 2023</h2>
+          <p class="date">August 5, 2023</p>
+        </a>
+        </div>
+      
+      </div>
+      
+      <div class="box" >
+        <a href="blog1.html">
+        <img src="/src/blog1.PNG" alt="Blog Image 101">
+        <div class="box-content">
+          <h2>AI and Finance: Key Developments in Early October 2022</h2>
+          <p class="date">October 12, 2022</p>
+        </a>
+        </div>
+      </div>
+                  
+      <!-- Continue with the same spacing until Blog Post 101 -->
+      
+  </div>
+</body>
+</html>
