@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/research",
+      "destination": "https://truthdecaysohamt.tiiny.site/",
+      "permanent": true
+    }
+  ]
+}
